@@ -209,12 +209,12 @@
                             <?php
                             $s = 1;
                             foreach ($image_list as $image) {
-                                 
+
                             ?>
                                 <div class="carousel-item    <?php echo ($s == 1) ? 'active' : ''; ?>" style="height:100%">
-                                    
-                                    <img class="w-100 h-100 border" style="height: 100%;object-fit:cover;"  src="./admin/<?php echo $image ?>" alt="Image">
-                                    
+
+                                    <img class="w-100 h-100 border" style="height: 100%;object-fit:cover;" src="./admin/<?php echo $image ?>" alt="Image">
+
                                 </div>
                             <?php $s++;
                             } ?>
