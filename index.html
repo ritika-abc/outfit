@@ -45,16 +45,23 @@
             min-height: 100vh;
             background-color: var(--bg-color);
             overflow: hidden;
-            background-image: url(https://photoshop-kopona.com/uploads/posts/2019-02/1550441916_32.jpg);
+            
             background-repeat: no-repeat;
             background-size: cover;
 
         }
+
         @media (min-width: 1200px) {
-    .container, .container-sm, .container-md, .container-lg, .container-xl {
-        max-width: 100%;
-    }
-}
+
+            .container,
+            .container-sm,
+            .container-md,
+            .container-lg,
+            .container-xl {
+                max-width: 100%;
+            }
+        }
+
         .container:before {
             content: "";
             position: absolute;
@@ -522,7 +529,7 @@
             .signin-signup {
                 width: 100%;
                 left: 50%;
-                top: 84% ;
+                top: 84%;
                 /* top: 95%; */
                 transform: translate(-50%, -100%);
                 transition: 1s 0.8s ease-in-out;
@@ -715,7 +722,8 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="contraseña" autocomplete="current-password" placeholder="Password" id="id_password" required="yes">
+                        <input type="password" name="contraseña" autocomplete="current-password" placeholder="Password"
+                            id="id_password" required="yes">
                         <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
                     </div>
 
@@ -735,7 +743,8 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="contraseña" autocomplete="current-password" placeholder="Password" id="id_reg" required="yes">
+                        <input type="password" name="contraseña" autocomplete="current-password" placeholder="Password"
+                            id="id_reg" required="yes">
                         <i class="far fa-eye" id="toggleReg" style="cursor: pointer;"></i>
                     </div>
 
@@ -747,7 +756,7 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>You don't have an account?</h3>
+                    <h3 class="text-white fs-4">You don't have an account?</h3>
                     <p>Create your account right now to follow people and like publications</p>
                     <button class="btn transparent" id="sign-up-btn">Register</button>
                 </div>
@@ -756,7 +765,7 @@
 
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>Already have an account?</h3>
+                    <h3 class="text-white">Already have an account?</h3>
                     <p>Login to see your notifications and post your favorite photos</p>
                     <button class="btn transparent" id="sign-in-btn">Sign in</button>
                 </div>
@@ -765,7 +774,7 @@
         </div>
     </div>
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a> -->
     <script>
         const sign_in_btn = document.querySelector("#sign-in-btn");
         const sign_up_btn = document.querySelector("#sign-up-btn");
@@ -794,7 +803,7 @@
         const togglePassword = document.querySelector("#togglePassword");
         const password = document.querySelector("#id_password");
 
-        togglePassword.addEventListener("click", function(e) {
+        togglePassword.addEventListener("click", function (e) {
             const type =
                 password.getAttribute("type") === "password" ? "text" : "password";
             password.setAttribute("type", type);
@@ -804,7 +813,7 @@
         const toggleReg = document.querySelector("#toggleReg");
         const pass = document.querySelector("#id_reg");
 
-        toggleReg.addEventListener("click", function(e) {
+        toggleReg.addEventListener("click", function (e) {
             const type = pass.getAttribute("type") === "password" ? "text" : "password";
             pass.setAttribute("type", type);
             this.classList.toggle("fa-eye-slash");
@@ -1043,7 +1052,7 @@
             }
         };
 
-        window.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("DOMContentLoaded", function () {
             Keyboard.init();
         });
     </script>
